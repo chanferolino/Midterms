@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             super.onPreExecute();
 
 
-            mAdapter.addAll(bokses);
+//            mAdapter.addAll(bokses);
         }
     }
 }
