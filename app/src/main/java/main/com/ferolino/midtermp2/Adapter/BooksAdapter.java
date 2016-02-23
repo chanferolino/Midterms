@@ -37,9 +37,7 @@ public class BooksAdapter extends ArrayAdapter<Boks> {
 
             // create the view holder
             viewHolder = new ViewHolder();
-
-            viewHolder.listtt = (ListView) convertView.findViewById(R.id.listView);
-
+            viewHolder.tvName = (TextView) convertView.findViewById(R.id.tvNames);
 
             convertView.setTag(viewHolder);
         } else {
@@ -47,12 +45,12 @@ public class BooksAdapter extends ArrayAdapter<Boks> {
         }
 
         // Set the movie data
-       Boks books = mBooks.get(position);
+        Boks booki = mBooks.get(position);
 
-        if (books != null) {
+        if (booki!= null) {
 
-            if (viewHolder.tvTitle != null) {
-                viewHolder.listtt.setText(album.getmName());
+            if (viewHolder.tvName != null) {
+                viewHolder.tvName.setText(booki.getTitle());
             }
 
         }
@@ -62,7 +60,7 @@ public class BooksAdapter extends ArrayAdapter<Boks> {
 
     private static class ViewHolder {
 
-        public ListView listtt;
+        public TextView tvName;
 
     }
 }
